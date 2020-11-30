@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="面试常问, 飞天喜欢你">
+    <meta name="keywords" content="飞天喜欢你">
     <meta name="description" content="一个想做前端的运维攻城狮">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>面试常问 | 飞天喜欢你</title>
+    <title>飞天喜欢你</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -245,12 +245,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">面试常问</h1>
+                    <h1 class="description center-align post-title"></h1>
                 </div>
             </div>
         </div>
@@ -379,7 +379,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-11-10
+                    2020-11-30
                 </div>
                 
 
@@ -395,9 +395,18 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h6 id="1-当你输入URL的时候，首先浏览器会做哪些事情"><a href="#1-当你输入URL的时候，首先浏览器会做哪些事情" class="headerlink" title="1. 当你输入URL的时候，首先浏览器会做哪些事情"></a>1. 当你输入URL的时候，首先浏览器会做哪些事情</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">当你输入URL的时候，首先浏览器会去请求DNS服务器，通过DNS获取相应的域名对应的IP，然后通过IP地址找到IP对应的服务器后，要求建立TCP连接，等浏览器发送完HTTP Request（请求）包后，服务器接收到请求包之后才开始处理请求包，服务器调用自身服务，返回HTTP Response（响应）包；客户端收到来自服务器的响应后开始渲染这个Response包里的主体（body），等收到全部的内容随后断开与该服务器之间的TCP连接。</span><br></pre></td></tr></table></figure>
-<h6 id="2-用户访问一个Web站点的过程"><a href="#2-用户访问一个Web站点的过程" class="headerlink" title="2. 用户访问一个Web站点的过程"></a>2. 用户访问一个Web站点的过程</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">一个Web服务器也被称为HTTP服务器，它通过HTTP协议与客户端通信。这个客户端通常指的是Web浏览器(其实手机端客户端内部也是浏览器实现的)。</span><br><span class="line">Web服务器的工作原理可以简单地归纳为：</span><br><span class="line">客户机通过TCP&#x2F;IP协议建立到服务器的TCP连接</span><br><span class="line">客户端向服务器发送HTTP协议请求包，请求服务器里的资源文档</span><br><span class="line">服务器向客户机发送HTTP协议应答包，如果请求的资源包含有动态语言的内容，那么服务器会调用动态语言的解释引擎负责处理“动态内容”，并将处理得到的数据返回给客户端</span><br><span class="line">客户机与服务器断开。由客户端解释HTML文档，在客户端屏幕上渲染图形结果</span><br><span class="line">一个简单的HTTP事务就是这样实现的，看起来很复杂，原理其实是挺简单的。需要注意的是客户机与服务器之间的通信是非持久连接的，也就是当服务器发送了应答后就与客户机断开连接，等待下一次请求。</span><br></pre></td></tr></table></figure>
-<h6 id="3-DNS的工作原理"><a href="#3-DNS的工作原理" class="headerlink" title="3. DNS的工作原理"></a>3. DNS的工作原理</h6><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">- 在浏览器中输入www.qq.com域名，操作系统会先检查自己本地的hosts文件是否有这个网址映射关系，如果有，就先调用这个IP地址映射，完成域名解析。</span><br><span class="line"></span><br><span class="line">- 如果hosts里没有这个域名的映射，则查找本地DNS解析器缓存，是否有这个网址映射关系，如果有，直接返回，完成域名解析。</span><br><span class="line"></span><br><span class="line">- 如果hosts与本地DNS解析器缓存都没有相应的网址映射关系，首先会找TCP&#x2F;IP参数中设置的首选DNS服务器，在此我们叫它本地DNS服务器，此服务器收到查询时，如果要查询的域名，包含在本地配置区域资源中，则返回解析结果给客户机，完成域名解析，此解析具有权威性。</span><br><span class="line"></span><br><span class="line">- 如果要查询的域名，不由本地DNS服务器区域解析，但该服务器已缓存了此网址映射关系，则调用这个IP地址映射，完成域名解析，此解析不具有权威性。</span><br><span class="line"></span><br><span class="line">- 如果本地DNS服务器本地区域文件与缓存解析都失效，则根据本地DNS服务器的设置（是否设置转发器）进行查询，如果未用转发模式，本地DNS就把请求发至 “根DNS服务器”，“根DNS服务器”收到请求后会判断这个域名(.com)是谁来授权管理，并会返回一个负责该顶级域名服务器的一个IP。本地DNS服务器收到IP信息后，将会联系负责.com域的这台服务器。这台负责.com域的服务器收到请求后，如果自己无法解析，它就会找一个管理.com域的下一级DNS服务器地址(qq.com)给本地DNS服务器。当本地DNS服务器收到这个地址后，就会找qq.com域服务器，重复上面的动作，进行查询，直至找到www.qq.com主机。</span><br><span class="line"></span><br><span class="line">- 如果用的是转发模式，此DNS服务器就会把请求转发至上一级DNS服务器，由上一级服务器进行解析，上一级服务器如果不能解析，或找根DNS或把转请求转至上上级，以此循环。不管是本地DNS服务器用是是转发，还是根提示，最后都是把结果返回给本地DNS服务器，由此DNS服务器再返回给客户机。</span><br></pre></td></tr></table></figure>
+                <p>SRE就是从稳定性角度出发来做事情，DevOps是从如何更有效地交付客户价值角度来做事情。</p>
+<p>角度不同而已，但是具体要做的事情，其实在落地时是差不多的。这也是为什么我们会对这两个概念产品迷惑。</p>
+<p>不过这种差别，会体现在具体细节上。</p>
+<p>比如，CI和CD，从SRE角度，就是希望完全自动化，减少人为操作，从而降低人为失误，提升稳定性，同时灰度验证也是从稳定性角度出发。</p>
+<p>但是，从DevOps角度，是期望最大程度保证交付效率和软件质量，所以DevOps里面除了自动化的编译、打包、发布等等，还会特别强调自动化测试、覆盖率、以及不同环境的验证等环节，也就是强调QA的介入。</p>
+<p>而SRE就不会强调和关注软件功能质量的问题，他关注的更多的是怎么确保网站的整体稳定性，通过SLO来衡量。</p>
+<p>所以，都是做CI和CD，做的事情也差不多，但是出发点不同，角度不同，在一些细节上也就不一样，但是大面上其实差别不大。</p>
+<p>另一个比较显著的差别，就是DevOps是贯穿整个软件生命周期的，所以覆盖面很广，从产品、需求、研发、测试到运维，讲究端到端拉通，所以我们看到的DevOps，其实无所不包，你把任何一个研发动作放进去都是合理的。</p>
+<p>但是，SRE只关注稳定性，所以会更有针对性，他不会care你需求分析的合理不合理，测试通过率怎么样等等，最终他只关注SLO是否达成。</p>
+<p>从我的角度看，SRE其实更聚焦，更适合运维落地，而DevOps更像是指导原则，需要端到端的参与才可以，大多数时候会受限于企业组织架构，需要自上而下的推进。</p>
+<p>从实际做事情的角度看，其实不必纠结两者到底有啥区别，从问题出发才最重要。</p>
+
             </div>
             <hr/>
 
@@ -422,7 +431,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://feitianlove.github.io/2020/11/10/%E9%9D%A2%E8%AF%95%E5%B8%B8%E9%97%AE/">https://feitianlove.github.io/2020/11/10/%E9%9D%A2%E8%AF%95%E5%B8%B8%E9%97%AE/</a>
+                    <a href="https://feitianlove.github.io/2020/11/30/%E6%B5%85%E8%B0%88sre%E5%92%8Cdevops/">https://feitianlove.github.io/2020/11/30/%E6%B5%85%E8%B0%88sre%E5%92%8Cdevops/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -499,9 +508,51 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2020/11/30/%E6%B5%85%E8%B0%88sre%E5%92%8Cdevops/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                        
+                        <span class="card-title"></span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            SRE就是从稳定性角度出发来做事情，DevOps是从如何更有效地交付客户价值角度来做事情。
+角度不同而已，但是具体要做的事情，其实在落地时是差不多的。这也是为什么我们会对这两个概念产品迷惑。
+不过这种差别，会体现在具体细节上。
+比如，CI和
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-11-30
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            ftfeng
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
             <div class="card">
                 <a href="/2020/11/17/goLand%E6%B3%A8%E6%84%8F%E9%97%AE%E9%A2%98/">
                     <div class="card-image">
@@ -519,48 +570,8 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-11-17
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            ftfeng
-                            
-                        </span>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2020/11/09/Vue%E4%B8%AD%E8%B7%AF%E7%94%B1%E7%9A%84%E4%BD%BF%E7%94%A8/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="Vue 中路由的使用">
-                        
-                        <span class="card-title">Vue 中路由的使用</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            介绍路由
-路由 : 是浏览器 URL 中的哈希值( # hash) 与 展示视图内容 之间的对应规则
-简单来说,路由就是一套映射规则(一对一的对应规则), 由开发人员制定规则.- 
-当 URL 中的哈希值( # hash) 发生改变后,路由
-                        
-                    </div>
-                    <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-11-09
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-11-17
                             </span>
                         <span class="publish-author">
                             
